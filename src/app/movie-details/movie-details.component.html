@@ -1,0 +1,22 @@
+<button class="back-button" (click)="goBack()">Back</button>
+
+<div *ngIf="movie" class="movie-details">
+    <div class="movie-details-container">
+      <!-- Movie Poster -->
+      <div class="movie-image">
+        <img [src]="movie.image" alt="{{ movie.title }}">
+      </div>
+  
+      <!-- Movie Title and Details -->
+      <div class="movie-info">
+        <h1>{{ movie.title }}</h1>
+  
+        <p><strong>Release Date:</strong> {{ movie.releaseDate }}</p>
+        <p><strong>Genre:</strong> {{ movie.genre }}</p>
+        <p><strong>Description:</strong> {{ movie.description }}</p>
+        <button (click)="onBookTickets()" class="btn btn-primary">Book Tickets</button>
+      </div>
+    </div>
+  </div>
+  
+

@@ -1,0 +1,11 @@
+[
+    {
+      "name": "Cinemark Fairfax",
+      "showtimes": ["9:00 AM", "12:00 PM", "3:00 PM", "6:00 PM"]
+    },
+    {
+      "name": "Regal Ashburn",
+      "showtimes": ["10:00 AM", "1:00 PM", "4:00 PM", "7:00 PM"]
+    }
+  ]
+  

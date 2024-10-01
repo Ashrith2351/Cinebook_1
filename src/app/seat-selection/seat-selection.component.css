@@ -1,0 +1,185 @@
+.seat-selection-container {
+  text-align: center;
+}
+
+.theater-info {
+  margin-bottom: 20px;
+}
+
+.category {
+  margin-bottom: 20px;
+}
+
+.seat-map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.seat {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 2px;
+  background-color: #ccc;
+  cursor: pointer;
+  user-select: none;
+}
+
+.available:hover {
+  background-color: #8f8;
+}
+
+.selected {
+  background-color: #4f4;
+}
+
+.sold {
+  background-color: #f44;
+  cursor: not-allowed;
+}
+
+.screen {
+  text-align: center;
+  padding: 10px;
+  background-color: #a8a5a5;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.color-indication-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.color-box {
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  margin: 0 10px;
+}
+
+.color-box.available {
+  background-color: #ccc;
+}
+
+.color-box.selected {
+  background-color: #4f4;
+}
+
+.color-box.sold {
+  background-color: #f44;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.controls button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.controls button:disabled {
+  background-color: #cccccc; /* Greyed out for disabled state */
+  color: #666666; /* Darker text color for disabled state */
+  cursor: not-allowed;
+}
+.back-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+.color-indication-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+.confirmation-message {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #4CAF50;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above all other content */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.modal-content button {
+  background-color: #6A1B9A; /* Purple */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #9C27B0; /* Darker purple */
+}

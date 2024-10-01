@@ -1,0 +1,27 @@
+<!-- Back Button -->
+<button class="back-button" (click)="goBack()">Back</button>
+
+<!-- Movie Information -->
+<div class="ticket-booking">
+  <h1>{{ movie.title }}</h1>
+  <p>{{ movie.genre }}</p>
+
+  <!-- Date Selector -->
+  <div class="date-selector">
+    <button *ngFor="let date of dates" (click)="selectDate(date)" 
+            [ngClass]="{'selected': date === selectedDate}" class="date-button">
+      {{ date | date:'EEE, MMM d' }}
+    </button>
+  </div>
+
+  <!-- Cinema and Showtimes Selector -->
+  <div *ngFor="let cinema of cinemas" class="cinema">
+    <div class="cinema-name">{{ cinema.name }}</div>
+    <div class="showtimes">
+      <button *ngFor="let showtime of cinema.showtimes" (click)="selectShowtime(cinema, showtime)" 
+              class="showtime-button">
+        {{ showtime }}
+      </button>
+    </div>
+  </div>
+</div>

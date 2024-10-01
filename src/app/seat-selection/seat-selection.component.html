@@ -1,0 +1,33 @@
+<button class="back-button" (click)="goBack()">Back</button>
+
+<div class="seat-selection-container">
+    <h1>{{ movie.title }}</h1>
+    <div class="theater-info">
+      <span>{{ cinema.name }} | {{ date | date:'fullDate' }} | {{ showtime }}</span>
+    </div>
+    <div class="seat-map-container">
+      <div class="seat-row" *ngFor="let row of seatMap; let rowIndex = index">
+        <div *ngFor="let seat of row; let seatIndex = index" 
+             class="seat" [ngClass]="{'available': !seat.booked, 'selected': isSelectedSeat(rowIndex, seatIndex), 'sold': seat.booked}"
+             (click)="toggleSeat(rowIndex, seatIndex)">
+          {{ seat.label }}
+        </div>
+      </div>
+      <div class="screen">All eyes this way please!</div>
+    </div>
+    <div class="color-indication-bar">
+      <div class="color-box available">Available</div>
+      <div class="color-box selected">Selected</div>
+      <div class="color-box sold">Sold</div>
+    </div>
+    <div class="controls">
+      <button (click)="confirmSelection()" [disabled]="selectedSeats.length === 0">Confirm Selection</button>
+      <div *ngIf="confirmationMessage" class="confirmation-message">{{ confirmationMessage }}</div>
+    </div>
+    <div class="modal" *ngIf="showModal">
+      <div class="modal-content">
+        <p>{{ confirmationMessage }}</p>
+        <button (click)="closeModal()">OK</button>
+      </div>
+    </div>
+  </div>

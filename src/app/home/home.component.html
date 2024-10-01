@@ -1,0 +1,26 @@
+<div class="home-container">
+  <h1>Welcome to Movie Ticket Booking</h1>
+
+  <div class="banner">
+    <h2>Now Showing</h2>
+  </div>
+
+  <div class="movies-section">
+    <h2>Movies</h2>
+    <div class="movie-slider-wrapper">
+      <button class="slider-btn left-btn" (click)="slideMovies('left')">&#10094;</button>
+
+      <!-- Movie Slider with 4 visible movies at a time -->
+      <div class="movie-slider" id="movieSlider">
+        <div class="movie-card" *ngFor="let movie of movies">
+          <a [routerLink]="['/movie', movies.indexOf(movie)]">
+            <img [src]="movie.image" alt="{{ movie.title }}">
+            <h5>{{ movie.title }}</h5>
+          </a>
+        </div>
+      </div>
+
+      <button class="slider-btn right-btn" (click)="slideMovies('right')">&#10095;</button>
+    </div>
+  </div>
+</div>
